@@ -3,7 +3,7 @@
 
 body{
     
-    background: linear-gradient(100deg,#1a9ee5,#51a9ae);
+    background: linear-gradient(to right top,#1a9ee5,#51a9ae);
     min-height: 100vh;
     height: 100vh
 }

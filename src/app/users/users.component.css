@@ -1,7 +1,36 @@
 
 .user{
     margin: 0 auto;
-    background: white;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
     height: 80vh;
     width: 80%;
+    border-radius: 2rem;
+    margin-top: 10vw;
+    /* position: relative; */
+    z-index: 5;
+    backdrop-filter:blur(2rem);
+}
+.shape1,.shape2{
+    width: 10rem;
+    height: 10rem;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.8),rgba(255,255,255,0.3));
+border-radius: 50%;
+}
+.shape1{
+    position: absolute;
+    top: 32%;
+    right: 9%;
+    
+    z-index: -1;
+    
+}
+.shape2{
+    
+    position: absolute;
+    left: 9%;
+    top: 32%;
+    
+    z-index: -1;
+    
+    
 }

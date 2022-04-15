@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'profiles',pathMatch:'full'},
   {path:'profiles',component:UsersComponent},
   {path:'repos',component:RepositoryComponent}
 ];
