@@ -2,9 +2,10 @@ import { RepositoryComponent } from './repository/repository.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
-  
+  {path:'profiles',component:UsersComponent},
   {path:'repos',component:RepositoryComponent}
 ];
 
