@@ -29,7 +29,7 @@ export class GitserviceService {
    }
    getUsers(): Observable <userData[]>{
 
-     const userUrl=`https://api.github.com/users/${this.username}?access_token=${environment.key}`
+     const userUrl=`https://api.github.com/users/${this.username}?${environment.key}`
      
 
     return this.http.get<userData[]>(userUrl)
