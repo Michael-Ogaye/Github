@@ -12,6 +12,16 @@ interface userData{
   repos_url:string;
   followers_Url:string;
   following_url:string
+  followers:number;
+  following:number;
+  created_at:string;
+  id:number
+  hirerable:string;
+  public_repos:number;
+  email:string;
+  blog:string;
+  updated_at:number
+
 }
 
 
