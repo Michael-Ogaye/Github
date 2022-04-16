@@ -30,23 +30,26 @@ interface userData{
   providedIn: 'root'
 })
 export class GitserviceService {
-  username='Charlotte-Natasha'
-  searchTerm='catering'
+    private userName!:string
+    private searchTerm!:string
+  
   
   constructor( private http:HttpClient) {
+
 
   
       
    }
+   
    getUsers(): Observable <userData[]>{
 
-     const userUrl=`https://api.github.com/users/${this.username}?${environment.key}`
+     const userUrl=`https://api.github.com/users/${this.userName}?${environment.key}`
      
 
     return this.http.get<userData[]>(userUrl)
   }
   getUserRepos():Observable<any[]>{
-    const userUrlr=`https://api.github.com/users/${this.username}/repos?${environment.key}`
+    const userUrlr=`https://api.github.com/users/${this}/repos?${environment.key}`
 
     return this.http.get<any[]>(userUrlr)
 
@@ -56,6 +59,15 @@ export class GitserviceService {
     const serchUrl=`https://api.github.com/search/repositories?q= ${this.searchTerm}&1,5`
     return this.http.get<any>(serchUrl);
 
+
+  }
+  updateProf(rcv:string){
+    this.userName=rcv
+
+  }
+
+  updateTerm(ot:string){
+    this.searchTerm=ot
 
   }
 

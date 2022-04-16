@@ -23,7 +23,11 @@ export class UsersComponent implements OnInit {
     
 
   }
+  enteredV!:string
+
+  
   createUser(){
+    this.gita.updateProf(this.enteredV)
 
     this.gita.getUsers().subscribe((res)=>{
       
@@ -38,6 +42,7 @@ export class UsersComponent implements OnInit {
     })
 
   }
+  
 
   getRep(){
     this.gita.getUserRepos().subscribe((repo)=>{

@@ -10,6 +10,7 @@ import { Repo } from '../repo';
 export class RepositoryComponent implements OnInit {
 
   repos:any;
+  term!:string
 
   constructor(private gt:GitserviceService) {
     this.searchReposa();
@@ -18,7 +19,10 @@ export class RepositoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
   searchReposa(){
+    this.gt.updateTerm(this.term)
     this.gt.repoSearch().subscribe((al)=>{
       console.log(al.items)
       let b= al.items

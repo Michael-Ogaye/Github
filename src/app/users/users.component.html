@@ -2,8 +2,9 @@
 
     <div class="form-group w-50 mx-auto p-4  my-5 rounded">
         <label class="form-label text-center text-danger w-100" for="user">Enter Github UserName</label>
-        <input class="form-control bg-transparent" type="text" id="user">
+        <input class="form-control bg-transparent" type="text"  id="user" (keyup)="createUser()" name="enteredV" [(ngModel)]="enteredV">
     </div>
+    
   <div class="user">
     <div *ngIf="users">
       <div class="panel panel-default">
