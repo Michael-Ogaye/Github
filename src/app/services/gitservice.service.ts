@@ -31,6 +31,7 @@ interface userData{
 })
 export class GitserviceService {
   username='kirandash'
+  searchTerm='pizza'
   
   constructor( private http:HttpClient) {
 
@@ -48,6 +49,13 @@ export class GitserviceService {
     const userUrlr=`https://api.github.com/users/${this.username}/repos?${environment.key}`
 
     return this.http.get<any[]>(userUrlr)
+
+  }
+
+  repoSearch():Observable<any>{
+    const serchUrl=`https://api.github.com/search/repositories?q= ${this.searchTerm}`
+    return this.http.get<any>(serchUrl);
+
 
   }
 

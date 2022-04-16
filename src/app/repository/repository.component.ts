@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitserviceService } from '../services/gitservice.service';
 
 @Component({
   selector: 'app-repository',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gt:GitserviceService) {
+    this.searchReposa();
+   }
 
   ngOnInit(): void {
+  }
+
+  searchReposa(){
+    this.gt.repoSearch().subscribe((al)=>{
+      console.log(al)
+    })
   }
 
 }
