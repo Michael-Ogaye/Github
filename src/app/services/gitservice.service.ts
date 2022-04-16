@@ -30,8 +30,8 @@ interface userData{
   providedIn: 'root'
 })
 export class GitserviceService {
-  username='kirandash'
-  searchTerm='pizza'
+  username='Charlotte-Natasha'
+  searchTerm='catering'
   
   constructor( private http:HttpClient) {
 
@@ -53,7 +53,7 @@ export class GitserviceService {
   }
 
   repoSearch():Observable<any>{
-    const serchUrl=`https://api.github.com/search/repositories?q= ${this.searchTerm}`
+    const serchUrl=`https://api.github.com/search/repositories?q= ${this.searchTerm}&1,5`
     return this.http.get<any>(serchUrl);
 
 

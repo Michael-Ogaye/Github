@@ -3,8 +3,18 @@
 
 .temp{
     width: 80%;
-    height: 100vh;
+    height: auto;
+    
+    ;
     background:linear-gradient(to bottom left, rgba(255,255,255,0.5),rgba(255,255,255,0.9));
     margin: 0 auto;
     margin-top: 5vw;
+}
+.repo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.temp{
+    width: 80%;
+    aspect-ratio: 1;
 }

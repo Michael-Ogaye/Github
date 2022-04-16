@@ -1,5 +1,13 @@
-<div class="repo">
-    <div class="temp">
-        
+<div class="repo ">
+    <div class="temp "*ngFor=" let repo of repos"  >
+        <div *ngIf="repo"  class="top" >
+            <div class="im">
+                <p>{{repo.name}}</p>
+            </div>
+           <p  *ngIf="repo.description">{{repo.description}}</p>
+
+           
+        </div>
+
     </div>
 </div>

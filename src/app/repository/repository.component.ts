@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitserviceService } from '../services/gitservice.service';
+import { Repo } from '../repo';
 
 @Component({
   selector: 'app-repository',
@@ -7,6 +8,8 @@ import { GitserviceService } from '../services/gitservice.service';
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
+
+  repos:any;
 
   constructor(private gt:GitserviceService) {
     this.searchReposa();
@@ -17,7 +20,15 @@ export class RepositoryComponent implements OnInit {
 
   searchReposa(){
     this.gt.repoSearch().subscribe((al)=>{
-      console.log(al)
+      console.log(al.items)
+      let b= al.items
+      
+      //   this.repos.push(new Repo(b.name,b.blob_url,b.description,b.forks,b.size,new Date(b.created_at),b.visibility,b.watchers))
+      // console.log(this.repos)
+
+      this.repos=b
+
+
     })
   }
 
