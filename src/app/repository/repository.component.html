@@ -11,6 +11,7 @@
                 <div class="icos text-align-center">
                     <p><strong><i class="fa-solid fa-code-fork text-warning me-2"></i></strong> <span class="text-light ">{{repo.forks}}</span></p>
                     <p><strong><i class="fa-regular fa-clock text-warning me-2"></i></strong> <span class="text-light">{{repo.created_at|date}}</span></p>
+                    <p><strong><i class="fa-regular fa-eye text-warning me-2"></i></strong> <span class="text-light">{{repo.visibility}}</span></p>
 
 
 
@@ -24,7 +25,10 @@
            
         </div>
         <div class="body">
-            <p class="text-danger"  *ngIf="repo.description">{{repo.description}}</p>
+            <div class="des mb-5 bg-light rounded p-4" *ngIf="repo.description">
+                <h6 class="text-center text-success">Description</h6>
+                <p class="text-danger"  >{{repo.description}}</p>
+            </div>
 
 
         </div>

@@ -18,7 +18,7 @@ border-radius: 50%;
 }
 .shape1{
     position: absolute;
-    top: 32%;
+    top: 55%;
     right: 9%;
     
     z-index: -1;
@@ -28,9 +28,17 @@ border-radius: 50%;
     
     position: absolute;
     left: 9%;
-    top: 32%;
+    top: 55%;
     
     z-index: -1;
     
     
+}
+input.form-control{
+    border: none;
+    border-bottom: 3px solid green;
+}
+input.form-control:focus{
+    
+    outline: 0;
 }
