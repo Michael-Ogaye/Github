@@ -9,9 +9,12 @@ import { Profile } from '../profile';
 })
 export class UsersComponent implements OnInit {
   users: any;
+  repos!:any[]
 
   constructor( private gita:GitserviceService) {
     this.createUser()
+    this.getRep()
+    
     
     
    }
@@ -34,6 +37,14 @@ export class UsersComponent implements OnInit {
       
     })
 
+  }
+
+  getRep(){
+    this.gita.getUserRepos().subscribe((repo)=>{
+
+      this.repos=repo;
+      console.log(this.repos)
+    })
   }
 
 }

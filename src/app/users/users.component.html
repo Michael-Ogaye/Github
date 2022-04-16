@@ -1,39 +1,67 @@
-
 <main>
-    <div class="user ">
-        <div *ngIf="users">
-            <div class="panel panel-default"  >
-                <div class="panel-heading">
-                    
-                    <div class="text-danger p-4  fs-4"><p>{{users.login}}</p></div>
-                    
-                </div>
-                <div class="panel-body bg-light ">
-                    <div class="row">
-                        <div class="p-5 col-6  mt-3 "><img  width="150px" class ="img-circle img-responsive" style="border-radius: 50%;" src="{{users.avatar_url}}" alt="">
-                            <div> <strong>UserId:</strong><span class="text-danger"> {{users.id}}</span></div>
-
-                            <div *ngIf="users.email">{{users.email}}</div>
-                            <div *ngIf="users.blog">{{users.blog}}</div>
-                            <div *ngIf="users.bio">{{users.bio}}</div>
-                            <div *ngIf="users.location">{{users.location}}</div>
-                        </div>
-                    </div>
-                </div>
-               
-                
-                
-
-            </div>
+  <div class="user">
+    <div *ngIf="users">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="text-danger p-4 fs-4">
+            <p>{{ users.login }}</p>
+          </div>
         </div>
+        <div class="panel-body bg-light">
+          <div class="row">
+            <div class="p-5 col-4 mt-3">
+              <img
+                width="150px"
+                class="img-circle img-responsive"
+                style="border-radius: 50%"
+                src="{{ users.avatar_url }}"
+                alt=""
+              />
+              <div>
+                <strong>UserId:</strong
+                ><span class="text-danger"> {{ users.id }}</span>
+              </div>
 
+              <div *ngIf="users.email" class="my-2">
+                <i class="fa-regular fa-envelope me-2"></i>{{ users.email }}
+              </div>
+              <div *ngIf="users.blog" class="my-2">
+                <i class="fa-solid fa-blog me"></i> {{ users.blog }}
+              </div>
+              <div *ngIf="users.bio" class="my-2">
+                <i class="fa-solid fa-book-atlas me-2"></i>{{ users.bio }}
+              </div>
+              <div *ngIf="users.location" class="my-2">
+                <i class="fa-solid fa-location-dot me-2"></i
+                >{{ users.location }}
+              </div>
+              <a href="{{users.html_url}}" class="btn btn-outline-success"> View On Github</a>
+            </div>
+
+            <div class="more-info col-8 my-5" >
+                <ul class="list-group me-2">
+                    <li class="list-group-item active bg-info border-0 text-center fs-3" aria-current="true">More info</li>
+                    <li class="list-group-item text-center"><div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-outline-success ">Followers <span class="text-danger">{{users.followers}}</span></button>
+                        <button type="button" class="btn btn-outline-success">Following <span class="text-danger">{{users.following}}</span></button>
+                        <button type="button" class="btn btn-outline-success">Public gists <span class="text-danger">{{users.public_gists}}</span></button>
+                      </div></li>
+                    <li *ngIf="users.company" class="list-group-item">{{users.company}}</li>
+                    <li *ngIf="users.public_repos" class="list-group-item">Public Repos: <span class="text-danger">{{users.public_repos}}</span> <a  class="btn btn-outline-success ms-3" href="{{users.repos_url}}">View</a></li>
+                    <li *ngFor="let repo of repos "  class="list-group-item">
+                        <h6 class="text-center   p-3">{{repo.name}}</h6>
+                        <div class="d-flex justify-content-evenly">
+                            <p><span class="text-danger">{{repo.language}}</span></p>
+                            <p> <strong>Forks</strong><span class="text-danger">{{repo.forks}}</span></p>
+                        </div>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="shape1"></div>
-    <div class="shape2"></div>
-    
+  </div>
+  <div class="shape1"></div>
+  <div class="shape2"></div>
 </main>
-
-
-
-
-

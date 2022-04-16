@@ -44,6 +44,12 @@ export class GitserviceService {
 
     return this.http.get<userData[]>(userUrl)
   }
+  getUserRepos():Observable<any[]>{
+    const userUrlr=`https://api.github.com/users/${this.username}/repos?${environment.key}`
+
+    return this.http.get<any[]>(userUrlr)
+
+  }
 
   
   
