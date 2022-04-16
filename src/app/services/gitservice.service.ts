@@ -30,7 +30,7 @@ interface userData{
   providedIn: 'root'
 })
 export class GitserviceService {
-  username='Michael-Ogaye'
+  username='kirandash'
   
   constructor( private http:HttpClient) {
 

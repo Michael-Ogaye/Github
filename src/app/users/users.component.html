@@ -1,6 +1,31 @@
 
 <main>
     <div class="user ">
+        <div *ngIf="users">
+            <div class="panel panel-default"  >
+                <div class="panel-heading">
+                    
+                    <div class="text-danger p-4  fs-4"><p>{{users.login}}</p></div>
+                    
+                </div>
+                <div class="panel-body bg-light ">
+                    <div class="row">
+                        <div class="p-5 col-6  mt-3 "><img  width="150px" class ="img-circle img-responsive" style="border-radius: 50%;" src="{{users.avatar_url}}" alt="">
+                            <div> <strong>UserId:</strong><span class="text-danger"> {{users.id}}</span></div>
+
+                            <div *ngIf="users.email">{{users.email}}</div>
+                            <div *ngIf="users.blog">{{users.blog}}</div>
+                            <div *ngIf="users.bio">{{users.bio}}</div>
+                            <div *ngIf="users.location">{{users.location}}</div>
+                        </div>
+                    </div>
+                </div>
+               
+                
+                
+
+            </div>
+        </div>
 
     </div>
     <div class="shape1"></div>

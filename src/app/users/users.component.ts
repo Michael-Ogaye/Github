@@ -8,18 +8,32 @@ import { Profile } from '../profile';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users:Profile[]=[]
+  users: any;
 
-  constructor( private gits:GitserviceService) {
-    this.gits.getUsers().subscribe((res)=>{
-      console.log(res)
-      // let dataSent=new Profile(res[0].avatar_url,res[0].login,res[0].followers,res[0].following,new Date(res[0].))
-      
-      
-    })
+  constructor( private gita:GitserviceService) {
+    this.createUser()
+    
+    
    }
 
   ngOnInit(): void {
+    
+
+  }
+  createUser(){
+
+    this.gita.getUsers().subscribe((res)=>{
+      
+      // console.log(res)
+      // let dataSent=new Profile(res.id,res.avatar_url,res.login,res.followers,res.following,new Date(res.created_at),res.organizations_url,res.hirerable,res.email,res.email)
+      // this.users.push(dataSent);
+      this.users=res
+      
+      
+      console.log(this.users)
+      
+    })
+
   }
 
 }
