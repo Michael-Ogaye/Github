@@ -12,9 +12,22 @@
 }
 .repo{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
 }
 .temp{
     width: 80%;
     aspect-ratio: 1;
+}
+.hrz{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.icos{
+    background-color: rgb(48, 91, 112);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
 }

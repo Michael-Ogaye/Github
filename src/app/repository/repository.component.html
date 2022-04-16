@@ -1,12 +1,32 @@
 <div class="repo ">
-    <div class="temp "*ngFor=" let repo of repos"  >
+    <div class="temp p-5  "*ngFor=" let repo of repos"  >
         <div *ngIf="repo"  class="top" >
             <div class="im">
-                <p>{{repo.name}}</p>
+                <p class="bg-warning p-3"><strong>Repository Name: <span class="text-success">{{repo.name}}</span></strong></p>
+                <hr>
+            <div class="hrz ">
+                <div class="ina">
+                    <img src="{{repo.owner.avatar_url}}" style="width: 150px;" alt="">
+                </div>
+                <div class="icos text-align-center">
+                    <p><strong><i class="fa-solid fa-code-fork text-warning me-2"></i></strong> <span class="text-light ">{{repo.forks}}</span></p>
+                    <p><strong><i class="fa-regular fa-clock text-warning me-2"></i></strong> <span class="text-light">{{repo.created_at|date}}</span></p>
+
+
+
+                </div>
             </div>
-           <p  *ngIf="repo.description">{{repo.description}}</p>
+                <P *ngIf="repo.owner.login"> <strong>0wner</strong><span class="text-success ms-3">{{repo.owner.login}}</span></P>
+
+            </div>
 
            
+           
+        </div>
+        <div class="body">
+            <p class="text-danger"  *ngIf="repo.description">{{repo.description}}</p>
+
+
         </div>
 
     </div>
