@@ -1,27 +1,53 @@
-# Github
+# Portfolio
+##### MICHAEL OGAYE
+### GitHub Search App
+## Table of Content
++ [Description](#description)
++ [Design](Design)
++ [Installation Requirement]( Requisites)
++ [Technology Used](technology-used)
++ [Live-links](#Livelinks)
++ [Reference](#reference)
++ [Licence](#licence)
++ [Authors Info](#aut)
+## Description
+<p>Github search App uses an Github Api to search for the profiles of github users,and public repositories</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## Design
+The design for this app was insipired from several available designs online
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## set-up
+### Vitals
+* A stable computer,whith proven working capacity
+* Internet connectivity to keep on committing your work to the github repo
+* Pen and paper to draw the designs
+### Installation Process
+* Node environment
+* Angular installed
+* The project is done in git initialized environment to enable one keep on saving his work on a remote repo
+## Technology Used
+* The core part of this project was built using the vanilla HTML
+* The cascading stylesheet was used for styling purposes, diffrent styles were employed, such as the box model properties such as margin and padding, 
 
-## Code scaffolding
+* Bootstrap has been largely used to style the page
+* The concepts of object oriented programming has been broadly applied
+## The live link
+To get a demenonstration of the final deployment of my page please follow this link
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+  
+[Go Back to the top](#portfolio)
+## Licence
+[MIT License](./LICENSE)
+Copyright (c) [2022] [Michael Ogaye]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[Go Back to the top](#portfolio)
+## Authors Info
+Slack Profile - Michael Ogaye
 
-## Running unit tests
+Linkedln - [Michael Ogaye](https://www.linkedin.com/in/ogaye-michael-279342212/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Email: hogaeymic@gmail.com
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Go Back to the top](#portfolio)
