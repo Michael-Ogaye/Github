@@ -16,7 +16,8 @@
 }
 .temp{
     width: 80%;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
+    height: auto;
 }
 .hrz{
     display: flex;

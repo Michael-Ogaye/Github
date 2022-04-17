@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TimeCountPipe } from './time-count.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     RepositoryComponent,
     NavbarComponent,
-    UsersComponent
+    UsersComponent,
+    TimeCountPipe
   ],
   imports: [
     BrowserModule,

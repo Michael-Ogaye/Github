@@ -11,10 +11,27 @@ export class RepositoryComponent implements OnInit {
 
   repos:any;
   term!:string
+  dat=new Date('2022-04-17')
+  dets:any
+  interval:any
 
   constructor(private gt:GitserviceService) {
     this.searchReposa();
+    this.updateDets();
    }
+   updateDets(){
+     
+      this.interval = setInterval(() => {
+        this.dets = Date.now();
+        let upas:any= new Date(this.repos.updated_at)
+        this.dets= this.dets - upas;
+  
+      }, 1000)
+       
+     
+   }
+
+
 
   ngOnInit(): void {
   }

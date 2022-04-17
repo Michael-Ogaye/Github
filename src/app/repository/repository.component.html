@@ -28,6 +28,7 @@
                 </div>
             </div>
                 <P *ngIf="repo.owner.login"> <strong>0wner</strong><span class="text-success ms-3">{{repo.owner.login}}</span></P>
+                <p><strong class="text-success">updated</strong> <span class="text-danger ms-2">{{repo.updated_at|date}}</span></p>
 
             </div>
 
@@ -40,6 +41,17 @@
                 <p class="text-danger"  >{{repo.description}}</p>
             </div>
 
+
+        </div>
+        <div class="down bg-info p-3">
+           <div class="lef">
+            <p><strong class="text-danger me-2">Languages</strong><span class="text-light">{{repo.language}}</span></p>
+            <p *ngIf="repo.license"><strong class="text-danger ">LIC<i class="fa-regular fa-id-card text-danger me-2 ms-1"></i></strong><span class="text-light">{{repo.license.key|uppercase}}</span></p>
+
+           </div>
+        <div class="righ">
+
+        </div>
 
         </div>
 

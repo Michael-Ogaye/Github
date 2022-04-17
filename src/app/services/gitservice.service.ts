@@ -49,14 +49,14 @@ export class GitserviceService {
     return this.http.get<userData[]>(userUrl)
   }
   getUserRepos():Observable<any[]>{
-    const userUrlr=`https://api.github.com/users/${this}/repos?${environment.key}`
+    const userUrlr=`https://api.github.com/users/${this.userName}/repos?${environment.key}`
 
     return this.http.get<any[]>(userUrlr)
 
   }
 
   repoSearch():Observable<any>{
-    const serchUrl=`https://api.github.com/search/repositories?q= ${this.searchTerm}&1,5`
+    const serchUrl=`https://api.github.com/search/repositories?q=${this.searchTerm}&1,5`
     return this.http.get<any>(serchUrl);
 
 
