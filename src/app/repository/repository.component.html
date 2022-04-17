@@ -9,14 +9,14 @@
 
 
 <div class="repo ">
-    <div class="temp p-5  "*ngFor=" let repo of repos"  >
+    <div class="temp p-4  "*ngFor=" let repo of repos"  >
         <div *ngIf="repo"  class="top" >
             <div class="im">
                 <p class="bg-warning p-3"><strong>Repository Name: <span class="text-success">{{repo.name}}</span></strong></p>
                 <hr>
             <div class="hrz ">
                 <div class="ina">
-                    <img src="{{repo.owner.avatar_url}}" style="width: 150px;" alt="">
+                    <img src="{{repo.owner.avatar_url}}"  alt="">
                 </div>
                 <div class="icos text-align-center">
                     <p><strong><i class="fa-solid fa-code-fork text-warning me-2"></i></strong> <span class="text-light ">{{repo.forks}}</span></p>
@@ -43,13 +43,17 @@
 
 
         </div>
-        <div class="down bg-info p-3">
+        <div class="down bg-info p-3 d-flex justify-content-around">
            <div class="lef">
             <p><strong class="text-danger me-2">Languages</strong><span class="text-light">{{repo.language}}</span></p>
-            <p *ngIf="repo.license"><strong class="text-danger ">LIC<i class="fa-regular fa-id-card text-danger me-2 ms-1"></i></strong><span class="text-light">{{repo.license.key|uppercase}}</span></p>
+            <p *ngIf="repo.license"><strong class="text-danger ">LIC<i class="fa-regular fa-id-card text-danger me-4 ms-1"></i></strong><span class="text-light">{{repo.license.key|uppercase}}</span></p>
+            <a class="btn btn-outline-light" target="blank"  href="{{repo.html_url}}">view repo</a>
 
            </div>
         <div class="righ">
+        <div class="dp my-4"><a href="{{repo.deployments_url}}" target="blank">Deployments</a></div>
+        <div class="dp"><a href="{{repo.clone_url}}" target="blank">Clone</a></div>
+            
 
         </div>
 

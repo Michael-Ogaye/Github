@@ -35,3 +35,43 @@
 .des h6{
     text-decoration: underline;
 }
+.dp a{
+    text-decoration: none;
+    color: purple;
+    display: block;
+}
+.ina img{
+    width: 150px;
+    
+}
+
+
+@media only screen and (max-width:850px){
+    .hrz{
+        flex-direction: column;
+        width: 100%;
+    }
+    .ina{
+        width: 100%;
+        text-align: center;
+    }
+.ina img{
+    
+    width: 100%;
+}
+.repo{
+    grid-template-columns: 1fr;
+}
+.temp{
+    width: 95%;
+    padding: auto;
+}
+
+.im p{
+    padding: auto;
+}
+.down{
+    flex-direction: column;
+    text-align: center;
+}
+}

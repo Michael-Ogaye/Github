@@ -6,7 +6,7 @@ export const environment = {
   
   production: false,
 
-   key: "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"
+   key: "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"
 
 
 

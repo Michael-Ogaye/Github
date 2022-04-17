@@ -45,6 +45,8 @@ export class UsersComponent implements OnInit {
   
 
   getRep(){
+    this.gita.updateProf(this.enteredV)
+
     this.gita.getUserRepos().subscribe((repo)=>{
 
       this.repos=repo;
