@@ -10,6 +10,7 @@ import { Profile } from '../profile';
 export class UsersComponent implements OnInit {
   users: any;
   repos!:any[]
+  worka!:any[]
 
   constructor( private gita:GitserviceService) {
     this.createUser()
@@ -17,7 +18,14 @@ export class UsersComponent implements OnInit {
     
     
     
+    
    }
+
+  //  pursa (){
+  //    for(let i=0; i<5;i++){
+  //      this.worka.push(this.repos[i])
+  //    }
+  //  }
 
   ngOnInit(): void {
     
@@ -46,6 +54,7 @@ export class UsersComponent implements OnInit {
 
   getRep(){
     this.gita.updateProf(this.enteredV)
+    
 
     this.gita.getUserRepos().subscribe((repo)=>{
 

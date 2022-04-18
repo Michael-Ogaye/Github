@@ -36,9 +36,37 @@ border-radius: 50%;
 }
 input.form-control{
     border: none;
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid purple;
 }
 input.form-control:focus{
     
     outline: 0;
+}
+
+.ufa{
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.uria{
+
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.8),rgba(255,255,255,0.3));
+    
+}
+@media only screen and (max-width:900px){
+    .ufa{
+
+        grid-template-columns: 1fr;
+
+    }
+    .user{
+        width: 100%;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .form-control{
+        width: 100%;
+    }
+
 }
