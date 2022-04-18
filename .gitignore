@@ -30,6 +30,9 @@ yarn-error.log
 !.src/environments/environment.prod.ts
 .history/*
 
+!.src/environments/environment.ts
+!.src/environments/environment.prod.ts
+
 
 # Miscellaneous
 /.angular/cache
