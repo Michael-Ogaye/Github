@@ -28,7 +28,7 @@
                 </div>
             </div>
                 <P *ngIf="repo.owner.login"> <strong>0wner</strong><span class="text-success ms-3">{{repo.owner.login}}</span></P>
-                <p><strong class="text-success">updated</strong> <span class="text-danger ms-2">{{repo.updated_at|date}}</span></p>
+                <p><strong class="text-success">updated</strong> <span class="text-danger ms-2">{{repo.updated_at|date|timeCount}}</span></p>
 
             </div>
 

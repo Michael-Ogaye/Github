@@ -44,13 +44,13 @@ export class GitserviceService {
    
    getUsers(): Observable <userData[]>{
 
-     const userUrl=`https://api.github.com/users/job?${environment.key}`
+     const userUrl=`https://api.github.com/users/${this.userName}?${environment.key}`
      
 
     return this.http.get<userData[]>(userUrl)
   }
   getUserRepos():Observable<any[]>{
-    const userUrlr=`https://api.github.com/users/job/repos?${environment.key}`
+    const userUrlr=`https://api.github.com/users/${this.userName}/repos?${environment.key}`
 
     return this.http.get<any[]>(userUrlr)
 
